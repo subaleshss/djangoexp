@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>data collection</title>
+    </head>
+    <body>
+        <div>
+            <form action="getdata" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="NAME">
+                <input type="text" name="age" placeholder="AGE"><br><br>
+                <input type="submit"><br>
+            </form>
+        </div>
+        <div>
+            <a href="view">to view the data press here</a>
+        </div>
+
+    </body>
+</html>
