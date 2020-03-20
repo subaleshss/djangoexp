@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Data view</title>
+    </head>
+    <body>
+        <div>
+            <h1>DATA</h1>
+            <br><br><br>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                {% for n in d %}
+                <tr>
+                    <td>{{n.name}}</td>
+                    <td>{{n.age}}</td>
+                </tr>
+                {% endfor %}
+            </table>  
+        </div>  
+        <div>
+            <a href="/">Press here to go back</a>
+        </div>
+    
+    </body>
+</html>
