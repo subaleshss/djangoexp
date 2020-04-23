@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import datacol
+from django.contrib.auth.models import User
 
 # Create your views here.
 def home(request):
@@ -16,4 +17,6 @@ def getdata(request):
 
 def viewdata(request):
     dt=datacol.objects.all()
-    return render(request,'view.html',{'d':dt})
+    c = request.user
+    n=c.username
+    return render(request,'view.html',{'d':dt,'na':n})
